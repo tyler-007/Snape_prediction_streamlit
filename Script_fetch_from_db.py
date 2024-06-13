@@ -43,31 +43,25 @@ projection = {
     'bookingDateDevice': 1
 }
 
-try:
-    # Execute the query and fetch the data
-    cursor = collection.find(query, projection)
-    cursor_list = list(cursor)
+# Execute the query and fetch the data
+cursor = collection.find(query, projection)
+cursor_list = list(cursor)
 
+# Check if cursor_list is not empty
+if cursor_list:
     # Convert the cursor to a pandas DataFrame
-    if cursor_list:
-        cursor_df = pd.DataFrame(cursor_list)
-        cursor_df['longitude'] = cursor_df['pickup'].apply(lambda x: x['location']['longitude'])
-        cursor_df['latitude'] = cursor_df['pickup'].apply(lambda x: x['location']['latitude'])
+    cursor_df = pd.DataFrame(cursor_list)
+    cursor_df['longitude'] = cursor_df['pickup'].apply(lambda x: x['location']['longitude'])
+    cursor_df['latitude'] = cursor_df['pickup'].apply(lambda x: x['location']['latitude'])
+    cursor_df['createdBy.mobile'] = cursor_df['createdBy'].apply(lambda x: str(x['mobile']))
+    cursor_df = cursor_df.drop(['pickup', 'createdBy'], axis=1)
+    print(cursor_df)
+else:
+    print("No data found.")
 
-        cursor_df['createdBy.mobile'] = cursor_df['createdBy'].apply(lambda x: str(x['mobile']))
+# Close the MongoDB client connection
+client.close()
 
-        cursor_df = cursor_df.drop(['pickup', 'createdBy'], axis=1)
-        #print(cursor_df)
-    else:
-        #print("No data found.")
-
-except Exception as e:
-    #print(f"An error occurred while fetching data: {e}")
-
-finally:
-    client.close()
-
-print("connected")
 
 '''import pandas as pd
 from pymongo import MongoClient
