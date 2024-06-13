@@ -1,3 +1,4 @@
+python==3.9.6
 tensorflow==2.15.*
 keras==2.15.*
 haversine
@@ -6,3 +7,4 @@ pandas
 matplotlib
 joblib
 pymongo
+streamlit

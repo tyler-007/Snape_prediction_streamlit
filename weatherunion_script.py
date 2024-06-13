@@ -57,4 +57,17 @@ hourly_demand_sectorV['rain_intensity'] = locality_weather_data['locality_weathe
 hourly_demand_sectorV['rain_accumulation'] = locality_weather_data['locality_weather_data']['rain_accumulation']
 
 
-print("WeatherUnion Script fetched")
+hourly_demand=hourly_demand[['y'	,'rain_intensity'	,'rain_accumulation'	,'temperature'	,'lag_1',	'lag_8',	'lag_12',	'lag_24']]
+hourly_demand_airpot=hourly_demand_airpot[['y'	,'rain_intensity'	,'rain_accumulation'	,'temperature'	,'lag_1',	'lag_8',	'lag_12',	'lag_24']]
+hourly_demand_dakshinDari=hourly_demand_dakshinDari[['y'	,'rain_intensity'	,'rain_accumulation'	,'temperature'	,'lag_1',	'lag_8',	'lag_12',	'lag_24']]
+hourly_demand_howrah=hourly_demand_howrah[['y'	,'rain_intensity'	,'rain_accumulation'	,'temperature'	,'lag_1',	'lag_8',	'lag_12',	'lag_24']]
+hourly_demand_rabindrasadan=hourly_demand_rabindrasadan[['y'	,'rain_intensity'	,'rain_accumulation'	,'temperature'	,'lag_1',	'lag_8',	'lag_12',	'lag_24']]
+hourly_demand_sectorV=hourly_demand_sectorV[['y'	,'rain_intensity'	,'rain_accumulation'	,'temperature'	,'lag_1',	'lag_8',	'lag_12',	'lag_24']]
+
+
+print("city",hourly_demand)
+print("dakshindari",hourly_demand_dakshinDari)
+print("airpor",hourly_demand_airpot)
+print('howrah',hourly_demand_howrah)
+print('rabindrasadan',hourly_demand_rabindrasadan)
+print('sector5',hourly_demand_sectorV)

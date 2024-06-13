@@ -5,9 +5,9 @@ from tensorflow.keras.models import load_model
 # Function to predict demand for a given zone
 def predict_demand_for_zone(zone, hourly_demand):
     # Load the LSTM model
-    model = load_model(f'/Scales and Models/lstm_{zone}.h5')
-    scaler_X = joblib.load(f'/Scales and Models/scaler_x_{zone}.pkl')
-    scaler_y = joblib.load(f'/Scales and Models/scaler_y_{zone}.pkl')
+    model = load_model(f'/Users/aayushjain/codes/projects/company assignements/Snape/City Heatmap/model/Scales and Models/lstm_{zone}.h5')
+    scaler_X = joblib.load(f'/Users/aayushjain/codes/projects/company assignements/Snape/City Heatmap/model/Scales and Models/scaler_x_{zone}.pkl')
+    scaler_y = joblib.load(f'/Users/aayushjain/codes/projects/company assignements/Snape/City Heatmap/model/Scales and Models/scaler_y_{zone}.pkl')
 
     # Extract hourly demand for the given zone
     hourly_demand_zone = hourly_demand[zone]
@@ -51,9 +51,9 @@ print("Predicted values:", predicted_values)
 import joblib
 from tensorflow.keras.models import load_model
 
-model = load_model(f'/Scales and Models/lstm_kolkata_city.h5')
-scaler_X = joblib.load(f'/Scales and Models/scaler_x_kolkata_city.pkl')
-scaler_y = joblib.load(f'/Scales and Models/scaler_y_kolkata_city.pkl')
+model = load_model(f'/Users/aayushjain/codes/projects/company assignements/Snape/City Heatmap/model/Scales and Models/lstm_kolkata_city.h5')
+scaler_X = joblib.load(f'/Users/aayushjain/codes/projects/company assignements/Snape/City Heatmap/model/Scales and Models/scaler_x_kolkata_city.pkl')
+scaler_y = joblib.load(f'/Users/aayushjain/codes/projects/company assignements/Snape/City Heatmap/model/Scales and Models/scaler_y_kolkata_city.pkl')
 print("model loaded")
 
 new_sample = hourly_demand.values
@@ -70,9 +70,9 @@ print(f"Predicted value of y for city:", y_pred)
 
 def predict_demand_for_zone(zone, hourly_demand):
     # Load the LSTM model
-    model = load_model(f'/Scales and Models/lstm_{zone}.h5')
-    scaler_X = joblib.load(f'/Scales and Models/scaler_x_{zone}.pkl')
-    scaler_y = joblib.load(f'/Scales and Models/scaler_y_{zone}.pkl')
+    model = load_model(f'/Users/aayushjain/codes/projects/company assignements/Snape/City Heatmap/model/Scales and Models/lstm_{zone}.h5')
+    scaler_X = joblib.load(f'/Users/aayushjain/codes/projects/company assignements/Snape/City Heatmap/model/Scales and Models/scaler_x_{zone}.pkl')
+    scaler_y = joblib.load(f'/Users/aayushjain/codes/projects/company assignements/Snape/City Heatmap/model/Scales and Models/scaler_y_{zone}.pkl')
 
     # Extract hourly demand for the given zone
     hourly_demand_zone = hourly_demand[zone]

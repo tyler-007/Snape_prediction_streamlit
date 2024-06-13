@@ -28,4 +28,10 @@ hourly_demand_rabindrasadan= hourly_demand_rabindrasadan.tail(1)
 hourly_demand_sectorV= hourly_demand_sectorV.tail(1)
 
 
-print("Lagged")
+
+print("city",hourly_demand)
+print("dakshindari",hourly_demand_dakshinDari)
+print("airpor",hourly_demand_airpot)
+print('howrah',hourly_demand_howrah)
+print('rabindrasadan',hourly_demand_rabindrasadan)
+print('sector5',hourly_demand_sectorV)
