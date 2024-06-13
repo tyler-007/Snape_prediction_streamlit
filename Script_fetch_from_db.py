@@ -3,15 +3,15 @@ from pymongo import MongoClient
 from urllib.parse import quote_plus
 from datetime import datetime, timedelta
 
-import certifi
+#import certifi
 
-ca_cert_bundle = certifi.where()  # Use the system's trusted CA bundle
+#ca_cert_bundle = certifi.where()  # Use the system's trusted CA bundle
 
 
 username = 'ML_Snape'
 password = 'Learn@2024'
 encoded_password = quote_plus(password)
-connection_string = f'mongodb+srv://{username}:{encoded_password}@snapeeapp.3rtq6.mongodb.net/?retryWrites=true&w=majority&appName=snapeeApp&tlsCAFile={ca_cert_bundle}'
+connection_string = f'mongodb+srv://{username}:{encoded_password}@snapeeapp.3rtq6.mongodb.net/?retryWrites=true&w=majority&appName=snapeeApp&ssl=true&ssl_cert_reqs=CERT_NONE'
 
 '''
 connection_string=f'mongodb+srv://ML_Snape:Learn@2024@snapeeapp.3rtq6.mongodb.net/?retryWrites=true&w=majority&appName=snapeeApp&tlsCAFile={ca_cert_bundle}'
