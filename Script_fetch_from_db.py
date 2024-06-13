@@ -57,12 +57,12 @@ try:
         cursor_df['createdBy.mobile'] = cursor_df['createdBy'].apply(lambda x: str(x['mobile']))
 
         cursor_df = cursor_df.drop(['pickup', 'createdBy'], axis=1)
-        print(cursor_df)
+        #print(cursor_df)
     else:
-        print("No data found.")
+        #print("No data found.")
 
 except Exception as e:
-    print(f"An error occurred while fetching data: {e}")
+    #print(f"An error occurred while fetching data: {e}")
 
 finally:
     client.close()
