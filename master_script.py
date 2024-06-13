@@ -5,25 +5,23 @@ import dataprocess
 import laggeddata
 import weatherunion_script
 import model_predict
+import app
 
-Script_fetch_from_db.run()
+def main():
+    Script_fetch_from_db.run()
+    Parse.run()
+    process.run()
+    dataprocess.run()
+    laggeddata.run()
+    weatherunion_script.run()
+    model_predict.run()
+    app.run()
+    
 
-# Execute script2
-Parse.run()
+if __name__ == "__main__":
+    main()
 
-process.run()
 
-# Execute script2
-dataprocess.run()
-
-laggeddata.run()
-
-# Execute script2
-weatherunion_script.run()
-
-model_predict.run()
-
-app.run()
 
 
 
