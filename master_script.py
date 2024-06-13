@@ -11,7 +11,7 @@ Script_fetch_from_db.run()
 # Execute script2
 Parse.run()
 
-Process.run()
+process.run()
 
 # Execute script2
 dataprocess.run()
